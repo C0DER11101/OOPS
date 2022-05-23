@@ -41,7 +41,10 @@ int f(X x, Y y)
 }
 
 then this function will fail to access data members of class X and class Y because this definition is for a friend function that is common to both classes. But here, f() is a member function of class X, so it has to be defined like a member function, but since
-it's a friend function of class Y, it will do its job of accessing the private member of class Y!!
+it's a friend function of class Y and member function of class X.
+
+That's why it needs to be defined like a member function and not like a friend function, but don't worry, it will do its job as a
+friend function of class Y!!!
 
 HAPPY CODING!!!
 
