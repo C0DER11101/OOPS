@@ -1,0 +1,50 @@
+Take a look at this class declarations below:::::
+
+
+class Y; // FORWARD DECLARATION OF CLASS Y
+class X
+{
+	int data;
+
+	public:
+	
+	void getdata();
+	int f(X, Y);
+};
+
+class Y
+{
+	int data;
+
+	public:
+	void getdata();
+	friend int X::f(X, Y); // member function of class X made a friend function of class Y
+};
+
+
+here the definition of f() will be like this:
+
+int X::f(X x, Y y)
+{
+	// code
+}
+
+because even though f() is a friend function of class Y but initially it's a member function of class X, but it can access the
+private members of class Y because this is one of the main features of friend functions!!!
+
+class Y cannot use f() because f() is member function of class X.
+if you define f() like a friend function in class Y:
+
+int f(X x, Y y)
+{
+	// code
+}
+
+then this function will fail to access data members of class X and class Y because this definition is for a friend function that is common to both classes. But here, f() is a member function of class X, so it has to be defined like a member function, but since
+it's a friend function of class Y, it will do its job of accessing the private member of class Y!!
+
+HAPPY CODING!!!
+
+
+:)
+;)
