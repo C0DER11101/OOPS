@@ -1,0 +1,13 @@
+A constructor with default arguments can be called with or without an argument.....
+
+if it's called with an argument then the constructor with default argument is called....
+
+otherwise it becomes a default constructor!!
+
+If your program has both a default constructor and a constructor with default argument
+
+then a statement like this
+
+A a;
+will be an ambigious call because you didn't give any argument, the compiler will get confused whether to use the constructor
+with default arguments or the default constructor, so it throws an error!!!!
