@@ -52,6 +52,7 @@ void A::show_ab()
 void A::get_c()
 {
 	cout<<"\n\nClass A:\n\n";
+
 	cout<<"enter value of c: ";
 	cin>>c;
 }
