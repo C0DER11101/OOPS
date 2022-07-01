@@ -54,6 +54,11 @@ int main(void)
 	   and can also access its member functions
 	*/
 
-	aptr->show();
+	aptr->show(); // calls show() of class B, because class A has a pure virtual function show()
+
+	/* 
+	   a pure virtual function is also called a "do nothing" function because it does nothing
+	   just like the pure virtual function show() of class A
+	*/
 	return 0;
 }
