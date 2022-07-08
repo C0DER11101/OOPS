@@ -36,13 +36,13 @@ int main(void)
 	B b;
 	A a;
 
-	bptr=&b; // error:   cannot convert a pointer to derived class to a pointer to a base class!!
+	bptr=&b; 
 
-	/* the rest of the below code wll not work; there's an error up here ^ */
 	bptr->m=10;
 	bptr->show();
 
-	bptr=&a;
+	/* the rest of the below code wll not work; there's an error up here ^ */
+	bptr=&a;// error:   cannot convert a pointer to derived class to a pointer to a base class!!
 	bptr->m=20;
 	bptr->show();
 	return 0;
