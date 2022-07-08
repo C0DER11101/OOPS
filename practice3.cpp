@@ -41,8 +41,8 @@ int main(void)
 	bptr->m=10;
 	bptr->show();
 
-	/* the rest of the below code wll not work; there's an error up here ^ */
 	bptr=&a;// error:   cannot convert a pointer to derived class to a pointer to a base class!!
+	/* the rest of the below code wll not work; there's an error up here ^ */
 	bptr->m=20;
 	bptr->show();
 	return 0;
